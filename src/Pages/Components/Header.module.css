@@ -1,0 +1,49 @@
+/* ############# MENU */
+
+.headerinfo {
+    font-size: 0,875em;
+    background: #d6d3c8;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.headerlogo img{
+    /* display block na img pq a imagem tem por padrao 3/4px pra baixo(nao pega o tamanho real, sempre aumenta mais a img) */
+    display: block;
+    /* margin 0 auto com display block centraliza. Com o display block a img tem tamanho definido */
+    margin: 40px auto;
+
+}
+
+.headermenu {
+    border-top: 3px solid #d6d3c8;
+    border-bottom: 3px solid #d6d3c8;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.headermenu li {
+    /* display inline-block pra adicionar padding top e bottom */
+    display: inline-block;
+}
+
+.headermenu a {
+    /* o a possui padrao display inline */
+    display: block;
+    padding: 5px 10px 5px 0;
+    text-decoration: none;
+    color: #252525;
+    font-size: 1.125em;
+}
+
+.headermenu li a::before {
+    /* falando com o pseudoelemento antes do li a */
+    content: '•';
+    padding-right: 10px;
+}
+
+/* zerando conteúdo • do primeiro elemento(first-child) */
+.headermenu li:first-child a::before {
+    content: '';
+}
